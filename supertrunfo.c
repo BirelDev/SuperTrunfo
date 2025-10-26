@@ -158,13 +158,45 @@ int main() {
                 printf("--------------------- \n");
 
                 //comparacao entre as 2 cartas
-                printf("Comparação de cartas 1 para vencer 0 para perder");
-                printf("População: Carta 1 venceu (%d)\n", populacaoCarta1 > populacaoCarta2);
-                printf("Área: Carta 1 venceu (%d)\n", areaCarta1 > areaCarta2);
-                printf("PIB: Carta 1 venceu (%d)\n", pibCarta1 > pibCarta2);
-                printf("Pontos turísticos: Carta 1 venceu (%d)\n", pontoTuristicosCarta1 > pontoTuristicosCarta2 );
-                printf("PIB per capita: Carta 1 venceu (%d)\n", pibpercapita1 > pibpercapita2);
-                printf("Densidade populacional: Carta 1 venceu (%d)\n", densidadepopulacional1 < densidadepopulacional2);
+                printf("Comparação de cartas \n");
+
+                if (populacaoCarta1 > populacaoCarta2){
+                    printf("Carta 1 venceu a carta 2 na categoria população\n");
+                } else {
+                    printf("Carta 2 venceu a carta 1 na categoria população\n");
+                }   
+                
+                if (areaCarta1 > areaCarta2){
+                    printf("Carta 1 venceu a carta 2 na categoria área\n");
+                } else {
+                    printf("Carta 2 venceu a carta 1 na categoria área\n");
+                }
+
+                if (pibCarta1 > pibCarta2){
+                    printf("Carta 1 venceu a carta 2 na categoria PIB\n");
+                } else {
+                    printf("Carta 2 venceu a carta 1 na categoria PIB\n");
+                }
+
+                if (pontoTuristicosCarta1 > pontoTuristicosCarta2){
+                    printf("Carta 1 venceu a carta 2 na categoria pontos turísticos\n");
+                } else {
+                    printf("Carta 2 venceu a carta 1 na categoria pontos turísticos\n");
+                }
+
+                if (pibpercapita1 > pibpercapita2){
+                    printf("Carta 1 venceu a carta 2 na categoria PIB per capita\n");
+                } else {
+                    printf("Carta 2 venceu a carta 1 na categoria PIB per capita\n");
+                }
+                
+                if (densidadepopulacional1 < densidadepopulacional2){
+                    printf("Carta 1 venceu a carta 2 na categoria densidade populacional\n");
+                } else {
+                    printf("Carta 2 venceu a carta 1 na categoria densidade populacional\n");
+                }
+
+                
 
                 //Variavel superpoder
                 double superpoder1 = (double)populacaoCarta1 
@@ -183,7 +215,15 @@ int main() {
                                     + densidadepopulacional2;                    
 
 
-                printf("SuperPoder carta 1 %.2f \nSuperPoder carta 2: %.2f \nCarta 1 vence? (%d)", superpoder1, superpoder2, (superpoder1 > superpoder2) );
+                printf("SuperPoder carta 1 %.2f \nSuperPoder carta 2: %.2f \n", superpoder1, superpoder2);
+                if (superpoder1 > superpoder2){
+                    printf("Carta 1 é a vencedora do Super Trunfo \n");
+                } else if (superpoder2 > superpoder1){
+                    printf("Carta 2 é a vencedora do Super Trunfo \n");
+                } else {
+                    printf("As cartas empataram no Super Trunfo \n");
+                }
+
     
 
 
